@@ -10,6 +10,21 @@ JSON::Class - Role to allow a class to unmarshall/marshall itself from JSON
 
 =begin code
 
+    use JSON::Class;
+
+    class Something does JSON::Class {
+
+        has Str $.foo;
+
+    }
+
+    my Something $something = Something.from-json('{ "foo" : "stuff" }');
+
+    ...
+
+    my Str $json = $something.to-json(); # -> '{ "foo" : "stuff" }'
+
+
 =end code
 
 =head1 DESCRIPTION
@@ -21,15 +36,15 @@ JSON::Class - Role to allow a class to unmarshall/marshall itself from JSON
 
 role JSON::Class {
    use JSON::Unmarshal;
+   use JSON::Marshal;
 
    method from-json(Str $json) {
       unmarshal($json, self);
    }
 
    method to-json() {
-
+       marshal(self);
    }
-
 }
 
 # vim: expandtab shiftwidth=4 ft=perl6
