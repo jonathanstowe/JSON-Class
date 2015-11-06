@@ -30,4 +30,5 @@ isa-ok $obj-new.version, Version, "version is a Version";
 is $obj-new.version.Str, "0.0.1", "and it stringies how we want";
 is $obj-new.version, $obj-orig.version, "and the two compare the same";
 
+done-testing;
 # vim: expandtab shiftwidth=4 ft=perl6
