@@ -61,18 +61,19 @@ class to create a new object with matching (public) attributes.
 
 =end pod
 
+
 role JSON::Class:ver<v0.0.1>:auth<github:jonathanstowe> {
 
-   use JSON::Unmarshal;
-   use JSON::Marshal;
+    use JSON::Unmarshal;
+    use JSON::Marshal;
 
-   method from-json(Str $json) returns JSON::Class {
-      unmarshal($json, self);
-   }
+    method from-json(Str $json) returns JSON::Class {
+        unmarshal($json, self);
+    }
 
-   method to-json() returns Str {
-       marshal(self);
-   }
+    method to-json() returns Str {
+        marshal(self);
+    }
 }
 
 # vim: expandtab shiftwidth=4 ft=perl6
