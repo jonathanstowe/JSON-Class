@@ -62,7 +62,7 @@ class to create a new object with matching (public) attributes.
 =end pod
 
 
-role JSON::Class:ver<v0.0.1>:auth<github:jonathanstowe> {
+role JSON::Class:ver<v0.0.2>:auth<github:jonathanstowe> {
 
     use JSON::Unmarshal;
     use JSON::Marshal;

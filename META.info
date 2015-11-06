@@ -18,5 +18,5 @@
     "Test"
   ],
   "description" : "role to provide simple serialisation/deserialisation of objects to/from JSON",
-  "version" : "v0.0.1"
+  "version" : "v0.0.2"
 }
