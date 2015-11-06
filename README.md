@@ -33,6 +33,12 @@ both serialisation and de-serialisation.  The exact behaviour depends on that
 of [JSON::Marshal](https://github.com/jonathanstowe/JSON-Marshal) and
 [JSON::Unmarshal](https://github.com/tadzik/JSON-Unmarshal) respectively.
 
+The  L<JSON::Marshal|https://github.com/jonathanstowe/JSON-Marshal> and
+L<JSON::Unmarshal|https://github.com/tadzik/JSON-Unmarshal> provide traits
+for controlling the unmarshalling/marshalling of specific attributes. If these
+are required for your application then you will need to use these modules
+directly in your code for the time being.
+
 ## Installation
 
 Assuming you have a working perl6 installation you should be able to
