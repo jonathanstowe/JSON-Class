@@ -5,8 +5,8 @@ use JSON::Class;
 
 # These are needed for the traits
 
-use JSON::Unmarshal;
-use JSON::Marshal;
+import JSON::Unmarshal;
+import JSON::Marshal;
 
 class TraitTest does JSON::Class {
     has Version $.version is marshalled-by('Str') is unmarshalled-by('new');
