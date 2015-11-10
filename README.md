@@ -1,3 +1,7 @@
+[JSON::Marshal]:   https://github.com/jonathanstowe/JSON-Marshal
+[JSON::Unmarshal]: https://github.com/tadzik/JSON-Unmarshal
+
+
 # JSON::Class
 
 A Role to allow Perl 6 objects  to be constructed and serialised from/to JSON.
@@ -30,11 +34,11 @@ the class to a JSON string.  The JSON created from an instance should
 round trip to a new instance with the same values for the "public attributes".
 "Private" attributes (that is ones without accessors,) will be ignored for
 both serialisation and de-serialisation.  The exact behaviour depends on that
-of [JSON::Marshal](https://github.com/jonathanstowe/JSON-Marshal) and
-[JSON::Unmarshal](https://github.com/tadzik/JSON-Unmarshal) respectively.
+of [JSON::Marshal][] and
+[JSON::Unmarshal][] respectively.
 
-The  L<JSON::Marshal|https://github.com/jonathanstowe/JSON-Marshal> and
-L<JSON::Unmarshal|https://github.com/tadzik/JSON-Unmarshal> provide traits
+The  [JSON::Marshal][] and
+[JSON::Unmarshal][] provide traits
 for controlling the unmarshalling/marshalling of specific attributes. If these
 are required for your application then you will need to use these modules
 directly in your code for the time being.
