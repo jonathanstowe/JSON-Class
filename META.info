@@ -8,7 +8,7 @@
     "source" : "git://github.com/jonathanstowe/JSON-Class.git"
   },
   "source-url" : "git://github.com/jonathanstowe/JSON-Class.git",
-  "perl" : "v6",
+  "perl" : "6.c",
   "build-depends" : [ ],
   "provides" : {
      "JSON::Class" : "lib/JSON/Class.pm"
