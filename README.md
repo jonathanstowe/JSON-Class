@@ -33,11 +33,10 @@ both serialisation and de-serialisation.  The exact behaviour depends on that
 of [JSON::Marshal](https://github.com/jonathanstowe/JSON-Marshal) and
 [JSON::Unmarshal](https://github.com/tadzik/JSON-Unmarshal) respectively.
 
-The  L<JSON::Marshal|https://github.com/jonathanstowe/JSON-Marshal> and
-L<JSON::Unmarshal|https://github.com/tadzik/JSON-Unmarshal> provide traits
-for controlling the unmarshalling/marshalling of specific attributes. If these
-are required for your application then you will need to use these modules
-directly in your code for the time being.
+The  [JSON::Marshal](https://github.com/jonathanstowe/JSON-Marshal) and
+[JSON::Unmarshal](https://github.com/tadzik/JSON-Unmarshal) provide traits
+for controlling the unmarshalling/marshalling of specific attributes which
+are re-exported by this module.
 
 ## Installation
 
@@ -66,9 +65,7 @@ Other install mechanisms may be become available in the future.
 
 ## Support
 
-This should be considered experimental software until such time that
-Perl 6 reaches an official release.  However suggestions/patches are
-welcomed via github at
+Suggestions/patches are welcomed via github at
 
    https://github.com/jonathanstowe/JSON-Class
 
@@ -76,5 +73,5 @@ welcomed via github at
 
 Please see the LICENCE file in the distribution
 
-(C) Jonathan Stowe 2015
+(C) Jonathan Stowe 2015, 2016
 
