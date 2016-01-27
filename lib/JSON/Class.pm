@@ -1,4 +1,4 @@
-use v6;
+use v6.c;
 
 =begin pod
 
@@ -67,11 +67,15 @@ class to create a new object with matching (public) attributes.
 
 =end pod
 
+use JSON::Unmarshal;
+use JSON::Marshal;
 
-role JSON::Class:ver<v0.0.2>:auth<github:jonathanstowe> {
+sub EXPORT {
+    { '&trait_mod:<is>'    =>  &trait_mod:<is> }
+}
 
-    use JSON::Unmarshal;
-    use JSON::Marshal;
+role JSON::Class:ver<0.0.3>:auth<github:jonathanstowe> {
+
 
     method from-json(Str $json) returns JSON::Class {
         unmarshal($json, self);
