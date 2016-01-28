@@ -2,7 +2,7 @@
    "provides" : {
       "JSON::Class" : "lib/JSON/Class.pm"
    },
-   "version" : "0.0.4",
+   "version" : "0.0.5",
    "test-depends" : [
       "Test"
    ],
