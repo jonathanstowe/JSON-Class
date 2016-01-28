@@ -58,11 +58,18 @@ type for the target class then an exception may be thrown.
 
 =head2 method to-json
 
-    method to-json() returns Str
+    method to-json(Bool :$skip-null) returns Str
 
 Serialises the public attributes of the object to a JSON string that
 represents the object, this JSON can be fed to the L<from-json> of the
 class to create a new object with matching (public) attributes.
+
+If the C<:skip-null> adverb is provided all attributes without a
+defined value will be ignored in serialisation. If you need finer
+grained control then you should apply the C<json-skip-null> attribute
+trait (defined by L<JSON::Marshal> ) to the traits you want to skip
+if they aren't defined (C<:json-skip> will still have the same effect
+though.)
 
 =end pod
 
@@ -73,15 +80,15 @@ sub EXPORT {
     { '&trait_mod:<is>'    =>  &trait_mod:<is> }
 }
 
-role JSON::Class:ver<0.0.3>:auth<github:jonathanstowe> {
+role JSON::Class:ver<0.0.4>:auth<github:jonathanstowe> {
 
 
     method from-json(Str $json) returns JSON::Class {
         unmarshal($json, self);
     }
 
-    method to-json() returns Str {
-        marshal(self);
+    method to-json(Bool :$skip-null) returns Str {
+        marshal(self, :$skip-null);
     }
 }
 

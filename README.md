@@ -33,6 +33,14 @@ both serialisation and de-serialisation.  The exact behaviour depends on that
 of (JSON::Marshal)[https://github.com/jonathanstowe/JSON-Marshal] and
 (JSON::Unmarshal)[https://github.com/tadzik/JSON-Unmarshal] respectively.
 
+
+If the ```:skip-null``` adverb is provided to ```to-json``` all attributes
+without a defined value will be ignored in serialisation. If you need
+finer grained control then you should apply the ```json-skip-null```
+attribute trait (defined by ```JSON::Marshal``` ) to the traits you
+want to skip if they aren't defined (```:json-skip``` will still have
+the same effect though.)
+
 The  (JSON::Marshal)[https://github.com/jonathanstowe/JSON-Marshal] and
 (JSON::Unmarshal)[https://github.com/tadzik/JSON-Unmarshal] provide traits
 for controlling the unmarshalling/marshalling of specific attributes which are
