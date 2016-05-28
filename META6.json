@@ -4,6 +4,7 @@
    },
    "version" : "0.0.7",
    "test-depends" : [
+      "JSON::Fast",
       "Test"
    ],
    "support" : {
