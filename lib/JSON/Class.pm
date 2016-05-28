@@ -80,7 +80,7 @@ sub EXPORT {
     { '&trait_mod:<is>'    =>  &trait_mod:<is> }
 }
 
-role JSON::Class:ver<0.0.6>:auth<github:jonathanstowe> {
+role JSON::Class:ver<0.0.7>:auth<github:jonathanstowe> {
 
 
     method from-json(Str $json) returns JSON::Class {
