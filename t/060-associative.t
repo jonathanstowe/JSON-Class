@@ -11,11 +11,12 @@ class C is JSON::Class {
 };
 
 my $res;
+todo "Only recently fixed in rakudo", 2;
 lives-ok {
     $res = C.from-json('{"bla": {"ble": "bli"}}');
+    is $res.bla<ble>, 'bli', "and get the right value";
 }, "from-json with shaped associative works";
 
-is $res.bla<ble>, 'bli', "and get the right value";
 
 done-testing;
 # vim: expandtab shiftwidth=4 ft=perl6
