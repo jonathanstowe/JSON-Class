@@ -74,7 +74,7 @@ though.)
 =end pod
 
 use JSON::Unmarshal;
-use JSON::Marshal:ver(v0.0.7..*);
+use JSON::Marshal:ver(v0.0.7+);
 
 sub EXPORT {
     { '&trait_mod:<is>'    =>  &trait_mod:<is> }
