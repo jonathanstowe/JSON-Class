@@ -83,7 +83,7 @@ my package EXPORT::DEFAULT {
 role JSON::Class:ver<0.0.10>:auth<github:jonathanstowe> {
 
 
-    method from-json(Str $json) returns JSON::Class {
+    method from-json(Str $json --> JSON::Class ) {
         my $ret = unmarshal($json, self);
         if $ret !~~ JSON::Class {
             $ret does JSON::Class;
@@ -91,7 +91,7 @@ role JSON::Class:ver<0.0.10>:auth<github:jonathanstowe> {
         $ret;
     }
 
-    method to-json(Bool :$skip-null) returns Str {
+    method to-json(Bool :$skip-null --> Str ) {
         marshal(self, :$skip-null);
     }
 }
