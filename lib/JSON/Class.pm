@@ -77,14 +77,14 @@ sorted in the outpur.
 
 =end pod
 
-use JSON::Unmarshal;
-use JSON::Marshal:ver(v0.0.7+);
+use JSON::Unmarshal:ver<0.08+>;
+use JSON::Marshal:ver<0.0.18+>;
 
 my package EXPORT::DEFAULT {
     OUR::{'&trait_mod:<is>'} := &trait_mod:<is>;
 }
 
-role JSON::Class:ver<0.0.13>:auth<github:jonathanstowe> {
+role JSON::Class:ver<0.0.14>:auth<github:jonathanstowe> {
 
 
     method from-json(Str $json --> JSON::Class ) {

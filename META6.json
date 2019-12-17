@@ -1,6 +1,6 @@
 {
   "name": "JSON::Class",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "auth": "github:jonathanstowe",
   "api": "1.0",
   "description": "role to provide simple serialisation/deserialisation of objects to/from JSON",
@@ -10,11 +10,12 @@
     "bugtracker": "https://github.com/jonathanstowe/JSON-Class/issues"
   },
   "perl": "6.*",
+  "raku": "6.*",
   "resources": [
   ],
   "depends": [
-    "JSON::Marshal",
-    "JSON::Unmarshal"
+    "JSON::Marshal:ver<0.0.18+>",
+    "JSON::Unmarshal:ver<0.08+>"
   ],
   "test-depends": [
     "JSON::Fast",
@@ -35,5 +36,5 @@
   "authors": [
     "Jonathan Stowe <jns+git@gellyfish.co.uk>"
   ],
-  "meta-version": "0"
+  "meta-version": "1"
 }

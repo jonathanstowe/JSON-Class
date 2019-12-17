@@ -1,6 +1,6 @@
 # JSON::Class
 
-A Role to allow Perl 6 objects  to be constructed and serialised from/to JSON.
+A Role to allow Raku objects  to be constructed and serialised from/to JSON.
 
 [![Build Status](https://travis-ci.org/jonathanstowe/JSON-Class.svg?branch=master)](https://travis-ci.org/jonathanstowe/JSON-Class)
 
@@ -50,7 +50,7 @@ re-exported by the module.
 
 ## Installation
 
-Assuming you have a working perl6 installation you should be able to
+Assuming you have a working Rakudo installation you should be able to
 install this with *zef* :
 
     # From the source directory
@@ -75,4 +75,3 @@ This is free software.
 Please see the (LICENCE)[LICENCE] file in the distribution for the details.
 
 © Jonathan Stowe 2015, 2016, 2017, 2019
-
