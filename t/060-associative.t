@@ -11,7 +11,6 @@ class C is JSON::Class {
 };
 
 my $res;
-todo "Only recently fixed in rakudo", 2;
 lives-ok {
     $res = C.from-json('{"bla": {"ble": "bli"}}');
     is $res.bla<ble>, 'bli', "and get the right value";
