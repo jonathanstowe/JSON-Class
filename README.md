@@ -50,8 +50,7 @@ re-exported by the module.
 
 ## Installation
 
-Assuming you have a working Rakudo installation you should be able to
-install this with *zef* :
+Assuming you have a working Rakudo installation you should be able to install this with *zef* :
 
     # From the source directory
    
@@ -74,4 +73,4 @@ This is free software.
 
 Please see the (LICENCE)[LICENCE] file in the distribution for the details.
 
-© Jonathan Stowe 2015, 2016, 2017, 2019
+© Jonathan Stowe 2015, 2016, 2017, 2019, 2020

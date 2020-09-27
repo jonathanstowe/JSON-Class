@@ -78,13 +78,13 @@ sorted in the outpur.
 =end pod
 
 use JSON::Unmarshal:ver<0.08+>;
-use JSON::Marshal:ver<0.0.18+>;
+use JSON::Marshal:ver<0.0.19+>;
 
 my package EXPORT::DEFAULT {
     OUR::{'&trait_mod:<is>'} := &trait_mod:<is>;
 }
 
-role JSON::Class:ver<0.0.14>:auth<github:jonathanstowe> {
+role JSON::Class:ver<0.0.15>:auth<github:jonathanstowe> {
 
 
     method from-json(Str $json --> JSON::Class ) {
@@ -100,4 +100,4 @@ role JSON::Class:ver<0.0.14>:auth<github:jonathanstowe> {
     }
 }
 
-# vim: expandtab shiftwidth=4 ft=perl6
+# vim: expandtab shiftwidth=4 ft=raku

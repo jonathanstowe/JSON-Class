@@ -1,6 +1,6 @@
 {
   "name": "JSON::Class",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "auth": "github:jonathanstowe",
   "api": "1.0",
   "description": "role to provide simple serialisation/deserialisation of objects to/from JSON",
@@ -14,7 +14,7 @@
   "resources": [
   ],
   "depends": [
-    "JSON::Marshal:ver<0.0.18+>",
+    "JSON::Marshal:ver<0.0.19+>",
     "JSON::Unmarshal:ver<0.08+>"
   ],
   "test-depends": [

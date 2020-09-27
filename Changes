@@ -1,3 +1,6 @@
+v0.0.15		Sun 27 Sep 18:45:43 BST 2020
+	* Up minimum version JSON::Marshal
+	* Remove ancient todo test
 v0.0.14		Tue 17 Dec 19:51:20 GMT 2019
 	* Specify minimum versions of dependencies
     * Raku it up
