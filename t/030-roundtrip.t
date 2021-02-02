@@ -1,4 +1,4 @@
-#!perl6
+#!raku
 
 use v6;
 use Test;
@@ -41,4 +41,4 @@ is $new.inner.hash<A>, $outer.inner.hash<A>, "inner hash 1";
 is $new.inner.hash<B>, $outer.inner.hash<B>, "inner hash 2";
 
 done-testing;
-# vim: expandtab shiftwidth=4 ft=perl6
+# vim: expandtab shiftwidth=4 ft=raku

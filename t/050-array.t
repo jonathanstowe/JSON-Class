@@ -1,4 +1,4 @@
-#!perl6
+#!raku
 
 use v6;
 
@@ -35,4 +35,4 @@ is $obj2[1].string, $obj[1].string, "got the second item back correctly";
 
 
 done-testing;
-# vim: expandtab shiftwidth=4 ft=perl6
+# vim: expandtab shiftwidth=4 ft=raku

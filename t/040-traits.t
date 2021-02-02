@@ -1,4 +1,4 @@
-#!perl6
+#!raku
 use v6;
 use Test;
 use JSON::Fast;
@@ -27,4 +27,4 @@ is $obj-new.version.Str, "0.0.1", "and it stringies how we want";
 is $obj-new.version, $obj-orig.version, "and the two compare the same";
 
 done-testing;
-# vim: expandtab shiftwidth=4 ft=perl6
+# vim: expandtab shiftwidth=4 ft=raku

@@ -58,7 +58,7 @@ type for the target class then an exception may be thrown.
 
 =head2 method to-json
 
-    method to-json(Bool :$skip-null, Bool :$sorted-keys) returns Str
+    method to-json(Bool :$skip-null, Bool :$sorted-keys, Bool :$pretty = True ) returns Str
 
 Serialises the public attributes of the object to a JSON string that
 represents the object, this JSON can be fed to the L<from-json> of the
@@ -73,18 +73,22 @@ though.)
 
 If the C<sorted-keys> adverb is provided this will eventually be passed
 to the JSON generation and will cause the keys in the JSON object to be
-sorted in the outpur.
+sorted in the output.
+
+The adverb C<pretty> is true by default, if you want to suppress I<pretty>
+formatting of the output (that is no un-necessary white space,) then
+you can supply C<:!pretty>.
 
 =end pod
 
 use JSON::Unmarshal:ver<0.08+>;
-use JSON::Marshal:ver<0.0.19+>;
+use JSON::Marshal:ver<0.0.20+>;
 
 my package EXPORT::DEFAULT {
     OUR::{'&trait_mod:<is>'} := &trait_mod:<is>;
 }
 
-role JSON::Class:ver<0.0.15>:auth<github:jonathanstowe> {
+role JSON::Class:ver<0.0.16>:auth<github:jonathanstowe> {
 
 
     method from-json(Str $json --> JSON::Class ) {
@@ -95,8 +99,8 @@ role JSON::Class:ver<0.0.15>:auth<github:jonathanstowe> {
         $ret;
     }
 
-    method to-json(Bool :$skip-null, Bool :$sorted-keys = False --> Str ) {
-        marshal(self, :$skip-null, :$sorted-keys);
+    method to-json(Bool :$skip-null, Bool :$sorted-keys = False, Bool :$pretty = True --> Str ) {
+        marshal(self, :$skip-null, :$sorted-keys, :$pretty);
     }
 }
 

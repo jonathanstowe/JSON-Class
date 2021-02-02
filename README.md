@@ -2,11 +2,11 @@
 
 A Role to allow Raku objects  to be constructed and serialised from/to JSON.
 
-[![Build Status](https://travis-ci.org/jonathanstowe/JSON-Class.svg?branch=master)](https://travis-ci.org/jonathanstowe/JSON-Class)
+![Build Status](https://github.com/jonathanstowe/JSON-Class/workflows/CI/badge.svg)
 
 ## Synopsis
 
-```
+```raku
 
     use JSON::Class;
 
@@ -39,9 +39,12 @@ of (JSON::Marshal)[https://github.com/jonathanstowe/JSON-Marshal] and
 If the ```:skip-null``` adverb is provided to ```to-json``` all attributes
 without a defined value will be ignored in serialisation. If you need
 finer grained control then you should apply the ```json-skip-null```
-attribute trait (defined by ```JSON::Marshal``` ) to the traits you
-want to skip if they aren't defined (```:json-skip``` will still have
+attribute trait (defined by ```JSON::Marshal``` ) to the attributes you
+want to skip if they aren't defined (```:skip-null``` will still have
 the same effect though.)
+
+If you don't need prettified, human readable JSON output then you can supply
+the `:!pretty` adverb to `to-json`.
 
 The  (JSON::Marshal)[https://github.com/jonathanstowe/JSON-Marshal] and
 (JSON::Unmarshal)[https://github.com/tadzik/JSON-Unmarshal] provide traits
@@ -73,4 +76,4 @@ This is free software.
 
 Please see the (LICENCE)[LICENCE] file in the distribution for the details.
 
-© Jonathan Stowe 2015, 2016, 2017, 2019, 2020
+© Jonathan Stowe 2015, 2016, 2017, 2019, 2020, 2021
