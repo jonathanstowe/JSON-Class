@@ -88,7 +88,7 @@ my package EXPORT::DEFAULT {
     OUR::{'&trait_mod:<is>'} := &trait_mod:<is>;
 }
 
-role JSON::Class:ver<0.0.16>:auth<github:jonathanstowe> {
+role JSON::Class:ver<0.0.17>:auth<github:jonathanstowe> {
 
 
     method from-json(Str $json --> JSON::Class ) {

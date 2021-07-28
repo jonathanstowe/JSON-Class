@@ -1,3 +1,5 @@
+v0.0.17		Wed 28 Jul 14:13:48 BST 2021
+	* Up the version of JSON::Marshall to get the accessor behaviour
 v0.0.16		Tue  2 Feb 09:32:49 GMT 2021
 	* Accept :pretty adverb for JSON::Marshal -> JSON::Fast
 v0.0.15		Sun 27 Sep 18:45:43 BST 2020
