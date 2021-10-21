@@ -27,6 +27,29 @@ JSON::Class - Role to allow a class to unmarshall/marshall itself from JSON
 
 =end code
 
+Or with C<:opt-in> marshalling:
+
+=begin code
+
+
+    use JSON::Class;
+    use JSON::OptIn;
+
+    class Something does JSON::Class[:opt-in] {
+
+        has Str $.foo is json;
+        has Str $.secret = 'secret';
+
+    }
+
+    my Something $something = Something.from-json('{ "foo" : "stuff" }');
+
+    ...
+
+    my Str $json = $something.to-json(); # -> '{ "foo" : "stuff" }'
+
+=end code
+
 =head1 DESCRIPTION
 
 This is a simple role that provides methods to instantiate a class from a
@@ -42,6 +65,13 @@ The  L<JSON::Marshal|https://github.com/jonathanstowe/JSON-Marshal> and
 L<JSON::Unmarshal|https://github.com/tadzik/JSON-Unmarshal> provide traits
 for controlling the unmarshalling/marshalling of specific attributes which
 are re-exported by this module.
+
+If your application exposes the marshalled data via, for example, an API, then
+you may choose to use the C<:opt-in> parameter to the role, which will cause only
+those attributes that are explicitly marked to be marshalled, avoiding the risk
+of inadvertently exposing sensitive data.  This is described in more detail in
+L<JSON::Marshal|https://github.com/jonathanstowe/JSON-Marshal>.
+
 
 =head1 METHODS
 
@@ -82,13 +112,13 @@ you can supply C<:!pretty>.
 =end pod
 
 use JSON::Unmarshal:ver<0.08+>;
-use JSON::Marshal:ver<0.0.20+>;
+use JSON::Marshal:ver<0.0.23+>;
 
 my package EXPORT::DEFAULT {
     OUR::{'&trait_mod:<is>'} := &trait_mod:<is>;
 }
 
-role JSON::Class:ver<0.0.17>:auth<github:jonathanstowe> {
+role JSON::Class:ver<0.0.18>:auth<github:jonathanstowe>[Bool :$opt-in = False] {
 
 
     method from-json(Str $json --> JSON::Class ) {
@@ -100,7 +130,7 @@ role JSON::Class:ver<0.0.17>:auth<github:jonathanstowe> {
     }
 
     method to-json(Bool :$skip-null, Bool :$sorted-keys = False, Bool :$pretty = True --> Str ) {
-        marshal(self, :$skip-null, :$sorted-keys, :$pretty);
+        marshal(self, :$skip-null, :$sorted-keys, :$pretty, :$opt-in);
     }
 }
 

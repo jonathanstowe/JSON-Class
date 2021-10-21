@@ -10,6 +10,10 @@
           "type": "file"
         },
         {
+          "name": "070-opt-in.t",
+          "type": "file"
+        },
+        {
           "name": "030-roundtrip.t",
           "type": "file"
         },
@@ -41,7 +45,7 @@
           "purpose": null,
           "children": [
             {
-              "name": "Class.pm",
+              "name": "Class.rakumod",
               "type": "file"
             }
           ],

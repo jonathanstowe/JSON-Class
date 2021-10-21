@@ -1,6 +1,6 @@
 {
   "name": "JSON::Class",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "auth": "github:jonathanstowe",
   "api": "1.0",
   "description": "role to provide simple serialisation/deserialisation of objects to/from JSON",
@@ -14,8 +14,10 @@
   "resources": [
   ],
   "depends": [
-    "JSON::Marshal:ver<0.0.21+>",
-    "JSON::Unmarshal:ver<0.08+>"
+    "JSON::Marshal:ver<0.0.23+>",
+    "JSON::Unmarshal:ver<0.08+>",
+    "JSON::OptIn",
+    "JSON::Name:ver<0.0.6+>"
   ],
   "test-depends": [
     "JSON::Fast",
@@ -31,7 +33,7 @@
   ],
   "license": "Artistic-2.0",
   "provides": {
-    "JSON::Class": "lib/JSON/Class.pm"
+    "JSON::Class": "lib/JSON/Class.rakumod"
   },
   "authors": [
     "Jonathan Stowe <jns+git@gellyfish.co.uk>"
