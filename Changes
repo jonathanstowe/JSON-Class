@@ -1,3 +1,5 @@
+v0.0.19	Sun  7 Aug 09:45:06 BST 2022
+	* Upload to zef repository
 v0.0.18		Thu 21 Oct 15:05:48 BST 2021
 	* Add ':opt-in' marshalling
 v0.0.17		Wed 28 Jul 14:13:48 BST 2021
@@ -32,3 +34,4 @@ v0.0.4		Thu Jan 28 10:59:29 2016 +0000
 	* Add support for :skip-null
 v0.0.3		Wed Jan 27 14:23:43 2016 +0000 
 	* Re-export the attribute traits
+

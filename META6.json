@@ -1,16 +1,10 @@
 {
-  "name": "JSON::Class",
-  "version": "0.0.18",
-  "auth": "github:jonathanstowe",
-  "api": "1.0",
-  "description": "role to provide simple serialisation/deserialisation of objects to/from JSON",
-  "source-url": "https://github.com/jonathanstowe/JSON-Class.git",
-  "support": {
-    "source": "https://github.com/jonathanstowe/JSON-Class.git",
-    "bugtracker": "https://github.com/jonathanstowe/JSON-Class/issues"
+  "provides": {
+    "JSON::Class": "lib/JSON/Class.rakumod"
   },
-  "perl": "6.*",
-  "raku": "6.*",
+  "authors": [
+    "Jonathan Stowe <jns+git@gellyfish.co.uk>"
+  ],
   "resources": [
   ],
   "depends": [
@@ -19,24 +13,29 @@
     "JSON::OptIn",
     "JSON::Name:ver<0.0.6+>"
   ],
+  "description": "role to provide simple serialisation/deserialisation of objects to/from JSON",
+  "source-url": "https://github.com/jonathanstowe/JSON-Class.git",
+  "author": "Jonathan Stowe <jns+git@gellyfish.co.uk>",
+  "raku": "6.*",
+  "version": "0.0.19",
+  "auth": "zef:jonathanstowe",
+  "name": "JSON::Class",
+  "license": "Artistic-2.0",
+  "build-depends": [
+  ],
   "test-depends": [
     "JSON::Fast",
     "Test"
   ],
-  "build-depends": [
-  ],
-  "author": "Jonathan Stowe <jns+git@gellyfish.co.uk>",
+  "api": "1.0",
   "tags": [
     "object",
     "serialisation",
     "JSON"
   ],
-  "license": "Artistic-2.0",
-  "provides": {
-    "JSON::Class": "lib/JSON/Class.rakumod"
+  "support": {
+    "source": "https://github.com/jonathanstowe/JSON-Class.git",
+    "bugtracker": "https://github.com/jonathanstowe/JSON-Class/issues"
   },
-  "authors": [
-    "Jonathan Stowe <jns+git@gellyfish.co.uk>"
-  ],
   "meta-version": "1"
 }
