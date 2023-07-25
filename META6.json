@@ -9,7 +9,7 @@
   ],
   "depends": [
     "JSON::Marshal:ver<0.0.23+>",
-    "JSON::Unmarshal:ver<0.08+>",
+    "JSON::Unmarshal:ver<0.14+>",
     "JSON::OptIn",
     "JSON::Name:ver<0.0.6+>"
   ],
@@ -17,7 +17,7 @@
   "source-url": "https://github.com/jonathanstowe/JSON-Class.git",
   "author": "Jonathan Stowe <jns+git@gellyfish.co.uk>",
   "raku": "6.*",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "auth": "zef:jonathanstowe",
   "name": "JSON::Class",
   "license": "Artistic-2.0",

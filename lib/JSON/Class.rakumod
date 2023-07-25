@@ -111,14 +111,14 @@ you can supply C<:!pretty>.
 
 =end pod
 
-use JSON::Unmarshal:ver<0.08+>;
+use JSON::Unmarshal:ver<0.14+>;
 use JSON::Marshal:ver<0.0.23+>;
 
 my package EXPORT::DEFAULT {
     OUR::{'&trait_mod:<is>'} := &trait_mod:<is>;
 }
 
-role JSON::Class:ver<0.0.18>:auth<github:jonathanstowe>[Bool :$opt-in = False] {
+role JSON::Class:ver<0.0.20>:auth<zef:jonathanstowe>[Bool :$opt-in = False] {
 
 
     method from-json(Str $json --> JSON::Class ) {

@@ -1,4 +1,6 @@
-v0.0.19	Sun  7 Aug 09:45:06 BST 2022
+v0.0.20		Tue 25 Jul 18:12:20 BST 2023
+	* Up dependency version of JSON::Unmarshal
+v0.0.19		Sun  7 Aug 09:45:06 BST 2022
 	* Upload to zef repository
 v0.0.18		Thu 21 Oct 15:05:48 BST 2021
 	* Add ':opt-in' marshalling
