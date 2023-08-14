@@ -1,3 +1,5 @@
+v0.0.21		Mon 14 Aug 12:54:26 BST 2023
+	* Up dependency version of JSON::Marshal
 v0.0.20		Tue 25 Jul 18:12:20 BST 2023
 	* Up dependency version of JSON::Unmarshal
 v0.0.19		Sun  7 Aug 09:45:06 BST 2022
